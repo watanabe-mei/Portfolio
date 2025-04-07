@@ -1,0 +1,50 @@
+@charset "utf-8";
+header {
+	padding: 5px 0;
+}
+header nav ul li {
+	margin: 0 5px;
+}
+
+label[for="menu"] {
+	display: block;
+	color: black;
+	padding: 6px 2px;
+	position: fixed;
+	top: 11px;
+	right: 4px;
+	z-index: 5;
+	cursor: pointer;
+}
+nav ul {
+	position: fixed;/*スクロールしても影響受け入れないこと*/
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(147, 197, 159, 0.644);
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+	display: none; /*全部ドロアーメニュー出来ましたら設定*/
+}
+nav ul li {
+	width: auto;
+	text-align: center;
+}
+nav ul li+li {
+	border-top: rgba(225,255,255,0.4) 1px solid;
+	padding: 10px 0;
+}
+
+nav ul li:first-child a img{
+	padding: 10px 0;
+}
+nav ul li a {
+	padding: 0.8em 0;
+}
+#menu:checked ~ ul {
+	display: flex;
+}
+
+

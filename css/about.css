@@ -1,0 +1,125 @@
+/* ========== ABOUT MODAL POPUP STYLES ========== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5); /* Overlay mờ */
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  position: relative;
+  margin: 3% auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0f0f3;
+  box-shadow: inset 5px 5px 10px #d1d1d1, inset -5px -5px 10px #ffffff,
+    5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+  text-align: left; /* Không căn giữa */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* GRID CHO NỘI DUNG MODAL */
+.modal-grid {
+  display: grid;
+  grid-template-columns: minmax(100px, 140px) 1fr minmax(80px, 100px);
+  gap: 10px;
+  text-align: left;
+}
+
+.modal-row {
+  display: contents; /* Cho phép modal-col hoạt động đúng trong grid */
+}
+
+.modal-col {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0f0f3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+    -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-title {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-section.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-section.slideInLeft {
+  animation: slideInLeft 1s ease forwards;
+}
+.animate-section.slideInRight {
+  animation: slideInRight 1s ease forwards;
+}
+
+/* Neumorphism + highlight xanh */
+.sidebar a.active,
+button.active {
+  background: linear-gradient(to bottom, #9cc3e6 0%, #ffffff 100%);
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  font-weight: bold;
+  color: #000;
+  color: rgba(155, 215, 255, 0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-col {
+    border-left: 5px solid #4a90e2;
+  }
+}

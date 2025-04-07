@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+html{
+	overflow-y: scroll;
+	color:#495c33;
+}
+main{
+	max-width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*img{
+	max-width: 100%;
+	height: auto;
+}
+.sub_visual img{
+	max-width: 100%;
+	height: auto;
+
+}
+*/
+h3{
+	margin:10px 20px;
+	line-height: 1.5;
+}
+h2{/*nav名*/
+	padding: 20px 0 20px;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.omoi strong{
+	font-size:1.3rem;
+	border-bottom: double pink 3px;
+}
+.omoi strong::before{
+	content: url(../images/about/about2.png);
+}
+.omoi strong::after{
+	content: url(../images/about/about2.png);
+}
+.omoi,.address{
+	line-height: 1.5;
+}
+section {
+	display: flow-root;
+	text-align: center;
+	margin: 3%;
+}
+.access{
+	float: left;
+	width:40%;
+	/*display: block;*/
+	/*text-align: center;*/
+	margin: 0 auto;
+}
+iframe{
+	float:right;
+	max-width: 100%;
+	width: 58%;
+}
+.address{
+	margin-bottom: 3%;
+	text-align:left;
+}
+
+@media screen and (max-width:600px){
+	.access,
+	iframe{
+		float: none;
+		width: 100%;
+		display: block;
+	}
+	.access img{
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+
+

@@ -1,0 +1,117 @@
+@charset "utf-8";
+body {
+	font-size:1rem;
+	line-height:1.5;/*要相談*/
+	color: #495c33;
+	text-align: center;
+}
+#wrapper {
+	margin: 0 auto;
+	max-width:1280px;
+	min-width: 320px;
+}
+h1{
+	text-align: left;;
+}
+h2{/*nav名*/
+	padding: 20px 0 20px;
+	font-size: 2rem;
+	text-align: center;
+}
+#notes{
+	padding-bottom: 20px;
+	font-size: 0.9rem;
+}
+h3{
+	font-size: 1.5rem;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+/*footer {
+		text-align: center;
+		padding: 20px;
+		background-color: #97af7a;
+		color: white;
+		margin-top: 20px;
+}*/
+.image p {
+	margin-bottom: 20px;
+}
+.gallery {
+	display: flow-root;
+	margin: 2% auto 5%;
+	width: 95%;
+}
+
+.gallery li {
+	float:left;
+	margin: 0.5%;
+	width: calc(33.333% - 1%);/*3分割*/
+}
+/*jq*/
+h4 {
+	font-size: 1rem;
+}
+#inline-wrap-1,
+#inline-wrap-2,
+#inline-wrap-3,
+#inline-wrap-4,
+#inline-wrap-5,
+#inline-wrap-6,
+#inline-wrap-7,
+#inline-wrap-8,
+#inline-wrap-9,
+#inline-wrap-10,
+#inline-wrap-11,
+#inline-wrap-12
+  {
+	background-color: #fff;
+  	/*width: 80%;*/
+	/*max-height: 100vh;*/
+	width: 80vh;
+  	margin: 0px auto;
+  	padding: 10px 10px 0 10px;
+  	box-sizing: border-box;
+	  .mfp-close{
+		z-index: 10;
+		position: relative;
+		/*font-size: 12px;*/
+		font-size: 1.025rem;
+		width: auto;
+		height: auto;
+		padding: 0;
+		color: #2a2a2a;
+	  }
+	color:#495c33;
+	text-align: center;
+}
+.popup-modal img:hover {
+	opacity: 0.8;
+}
+
+/**/
+
+
+
+@media screen and (max-width: 600px) {
+	.gallery > li {
+		width: calc(50% - 1%); /* 画面が小さくなると2分割表示 */
+	}
+	#inline-wrap-1,
+	#inline-wrap-2,
+	#inline-wrap-3,
+	#inline-wrap-4,
+	#inline-wrap-5,
+	#inline-wrap-6,
+	#inline-wrap-7,
+	#inline-wrap-8,
+	#inline-wrap-9,
+	#inline-wrap-10,
+	#inline-wrap-11,
+	#inline-wrap-12 {
+		width: 90%;
+	}
+}

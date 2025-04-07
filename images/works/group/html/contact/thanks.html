@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Petit fleurs">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THANKS YOU::Petit fleurs</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/common_sp.css" media="screen and (max-width: 600px)">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<script src="../assets/js/jquery-3.7.1.min.js"></script>
+<style>
+	/* Container chứa thiệp */
+	.card-container {
+		perspective: 1000px; /* Hiệu ứng 3D */
+		width: 900px;
+		height: 506px;
+		margin: 20px auto 50px;
+		padding: 5px;
+	}
+
+	/* Thiệp gồm 2 mặt */
+	.card {
+		position: relative;
+		width: 900px;
+		height: 506px;
+		transform-style: preserve-3d;
+		transition: transform 1s ease-in-out; /* Hiệu ứng lật */
+	}
+
+	/* Khi tải trang, thiệp tự động lật */
+	.card-container.flipped .card {
+		transform: rotateY(180deg);
+	}
+
+	/* Mặt trước và mặt sau của thiệp */
+	.card-front, .card-back {
+		position: absolute;
+		backface-visibility: hidden; /* Ẩn mặt sau khi chưa lật */
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		font-family: "Dancing Script", cursive;
+		border-radius: 20px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
+
+	/* Mặt trước của thiệp */
+	.card-front {
+		background: linear-gradient(45deg, #226304, #30ef0e);
+		color: white;
+		font-weight: bold;
+		font-size: 70px;
+		margin: 10px auto;
+	}
+
+	/* Mặt sau của thiệp */
+	.card-back {
+		background-image: url('../assets/images/contact/5.png'); /* Thay bằng đường dẫn ảnh */
+		background-size: cover; /* Giúp ảnh phủ kín */
+		background-position: center;
+		background-repeat: no-repeat;
+		transform: rotateY(180deg);
+		backface-visibility: hidden;
+		margin: 10px auto;
+	}
+
+	/* messbtn */
+	.messBtns {
+		position: fixed;
+		z-index: 4;
+		right: 75px;
+		bottom: 135px;
+		border: none;
+		background: none;
+	}
+
+	@media screen and (max-width: 800px) {
+		.card-container {
+			width: 90vw;
+			perspective: 500px; /* ✅ Điều chỉnh hiệu ứng 3D phù hợp */
+		}
+		.card {
+			width: 100%;
+		}
+		.card-front, 
+		.card-back {
+			width: 100%;
+			height: auto;
+			margin: 10px auto;
+		}
+	}
+
+/* 🔹 Chế độ chữ trượt xuống khi màn hình < 650px */
+@media (max-width: 650px) {
+    .card-container {
+        perspective: none; /* Tắt hiệu ứng 3D */
+        width: 90vw;
+        max-width: 500px;
+    }
+
+    .card {
+        transform: none !important; /* Ngăn hiệu ứng lật */
+		align-items: center;
+    }
+
+    .card-front {
+        position: relative;
+		font-size: 1.5rem;
+    }
+
+    .card-back {
+        position: absolute;
+        top: -100%; /* Ẩn trên màn hình */
+        opacity: 0; /* Ẩn ban đầu */
+        transition: all 0.8s ease-in-out;
+        transform: none;
+    }
+
+    /* Khi kích hoạt hiệu ứng */
+    .card-container.flipped .card-back {
+        top: 0; /* Trượt xuống */
+        opacity: 1; /* Hiện ra */
+    }
+}
+
+</style>
+</head>
+<body id="thanks">
+<div id="wrapper">
+	<header>
+		<div>
+			<p><a href="../index.html"><img src="../assets/images/home/logo.png" alt="ロゴ"></a></p>
+			<h1>ようこそ、<br>Petit Fleurs へ</h1>
+		</div>
+		<nav>
+			<input type="checkbox" id="menu">
+			<label for="menu"><img src="../assets/images/home/menuBtn.png" alt="MENU"></label>
+			<ul>
+				<li class="menu1"><a href="../index.html"><img src="../assets/images/home/nav/1.png" alt="HOME"></a></li>
+				<li class="menu2"><a href="../about/index.html"><img src="../assets/images/home/nav/2.png" alt="ABOUT"></a></li>
+				<li class="menu3"><a href="../gift/index.html"><img src="../assets/images/home/nav/3.png" alt="GIFT"></a></li>
+				<li class="menu4"><a href="../workshop/index.html"><img src="../assets/images/home/nav/4.png" alt="WORKSHOP"></a></li>
+				<li class="menu5"><a href="../gallery/index.html"><img src="../assets/images/home/nav/5.png" alt="GALLERY"></a></li>
+				<li class="menu6"><a href="../contact/index.html"><img src="../assets/images/home/nav/6.png" alt="CONTACT"></a></li>
+			</ul>
+		</nav>
+		<p class="messBtns"><a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/home/ins/22.png" alt="instagram"></a></p>
+	</header>
+	<main>
+	<p><img src="../assets/images/contact/sub_thanks.png" alt="トップ画像"></p>
+	<div class="card-container" id="card">
+		<div class="card">
+			<h2 class="card-front">PETIT FLEURS<br>フラワーショップ<br>より</h2>
+			<p class="card-back"><img src="../assets/images/contact/5.png" alt="THANKS YOU"></p>
+		</div>
+	</div>
+
+	<script>
+        window.onload = function() {
+			setTimeout(function() {
+				let cardContainer = document.querySelector(".card-container");
+
+				if (window.innerWidth >= 650) {
+					// Nếu màn hình lớn hơn hoặc bằng 650px, dùng hiệu ứng lật 3D
+					cardContainer.classList.add("flipped");
+				} else {
+					// Nếu màn hình nhỏ hơn 650px, dùng hiệu ứng chữ trượt
+					document.querySelector(".card-back").style.top = "0";
+					document.querySelector(".card-back").style.opacity = "1";
+				}
+			}, 1000); // Hiệu ứng chạy sau 1 giây
+		};
+    </script>
+
+	</main>
+	<footer>
+		<p>Copyright &copy; 2025 Petit fleurs All rights reserved.</p>
+	</footer>
+<!--wrapper 終了--></div>
+</body>
+</html>

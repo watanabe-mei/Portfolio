@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+form p {
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+main form {
+    max-width: 1000px; /* Giới hạn kích thước tối đa */
+    margin: 0 auto  30px; /* Căn giữa theo chiều ngang */
+    padding: 20px;
+    border: 2px solid #af7d7a; /* Chỉ để nhìn rõ khung */
+    border-radius: 10px; /* Bo góc cho đẹp hơn */
+    background: #e1f8c4; /* Màu nền nhẹ */
+}
+
+main div {
+	border-bottom: 1px dotted #af7d7a;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div dt {
+	font-weight: bold;
+	width: 35%;
+	text-decoration: none;
+}
+div dd {
+	width: 50%;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+	width: 100%;
+	color: #495c33;
+}
+.odd select {
+	color:#495c33;
+}
+main input{
+	color:#344125;
+}
+.gap {
+	display: flex;
+	flex-wrap: wrap;
+}
+.gap dd {
+	width: 25%;
+}
+.gap input[type="text"] {
+	width: 85%;
+}
+
+/* thanks */
+.thanks_page {
+	background: none;
+	border: none;
+	text-align: center;
+}
+.thanks_page .thanks {
+	opacity: 0; /* Ẩn icon mặc định */
+	transition: opacity 0.3s ease-in-out;
+}
+.thanks_page:hover .thanks {
+	opacity: 1;
+} 
+
+@media (max-width: 600px) {
+    dl div {
+		display: block;
+		padding: 5px;
+		margin: 0 auto;
+		width: 90%;
+	}
+	dl dt {
+		text-decoration: underline;
+		width: 100%;
+		font-weight: bold;
+	}
+	dl dd {
+		margin: 5px;
+		width: 45%;
+	}
+	.gap {
+		display: block;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		width: 196.5%;
+	}
+	.gap input[type="text"] {
+		width: 353%;
+	}
+
+	dl dd textarea {
+		width: 196%;
+	}
+
+	.odd select {
+		width: 203%;
+	}
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Petit fleurs">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホーム::Petit fleurs</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/css/common_sp.css" media="screen and (max-width: 600px)">
+<link rel="stylesheet" href="assets/css/home.css">
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/script.js"></script>
+</head>
+<body id="home">
+<div id="wrapper">
+	<header>
+		<div>
+			<p><a href="index.html"><img src="assets/images/home/logo.png" alt="ロゴ"></a></p>
+			<h1>ようこそ、<br>Petit Fleurs へ</h1>
+		</div>
+		<nav>
+			<input type="checkbox" id="menu">
+			<label for="menu"><img src="assets/images/home/menuBtn.png" alt="MENU"></label>
+			<ul>
+				<li class="menu1"><a href="index.html"><img src="assets/images/home/nav/1.png" alt="HOME"></a></li>
+				<li class="menu2"><a href="about/index.html"><img src="assets/images/home/nav/2.png" alt="ABOUT"></a></li>
+				<li class="menu3"><a href="gift/index.html"><img src="assets/images/home/nav/3.png" alt="GIFT"></a></li>
+				<li class="menu4"><a href="workshop/index.html"><img src="assets/images/home/nav/4.png" alt="WORKSHOP"></a></li>
+				<li class="menu5"><a href="gallery/index.html"><img src="assets/images/home/nav/5.png" alt="GALLERY"></a></li>
+				<li class="menu6"><a href="contact/index.html"><img src="assets/images/home/nav/6.png" alt="CONTACT"></a></li>
+			</ul>
+		</nav>
+		<p class="messBtns zoom"><a href="https://www.instagram.com/" target="_blank"><img src="assets/images/home/ins/22.png" alt="instagram"></a></p>
+		<button class="btn"><img src="assets/images/home/ins/followme.png" alt=""></button>
+	</header>
+	<main>
+	<div class="main-slider">
+		<div class="slider">
+			<ul class="slides">
+				<li><img src="assets/images/home/mainVisual/1.png" alt=""></li>
+				<li><img src="assets/images/home/mainVisual/2.png" alt=""></li>
+				<li><img src="assets/images/home/mainVisual/3.png" alt=""></li>
+				<li><img src="assets/images/home/mainVisual/4.png" alt=""></li>
+				<li><img src="assets/images/home/mainVisual/5.png" alt=""></li>
+				<li><img src="assets/images/home/mainVisual/6.png" alt=""></li>
+				<li><img src="assets/images/home/mainVisual/7.png" alt=""></li>
+			</ul>
+			<button class="prevBtn"><img src="assets/images/home/prev.png" alt="Prev"></button>
+    		<button class="nextBtn"><img src="assets/images/home/next.png" alt="Next"></button>
+		</div>
+	</div>
+	<h2>ABOUT</h2>
+	<p class="text">おくる心、つたえる心、めでる心<br>
+		プチフルールのすずらんのロゴにはそんな想いを束ねさせていただいています。</p>
+	<ol>
+		<li><img src="assets/images/home/sub_top/1.png" alt="花の写真1"></li>
+		<li><img src="assets/images/home/sub_top/2.png" alt="花の写真2"></li>
+		<li><img src="assets/images/home/sub_top/3.png" alt="花の写真3"></li>
+		<li><img src="assets/images/home/sub_top/4.png" alt="花の写真4"></li>
+	</ol>
+	<h2>最新情報</h2>
+	<dl>
+		<div class="event">
+			<dt class="event-date" data-date="2025-03-12">2025.03.12</dt>
+			<dd class="tooltip">後 <span class="countdown"></span> 日間残りです！！</dd>
+			<dd>HPリニューアル<br>
+				店舗リニューアルに伴いHPもリニューアルいたしました。<br>
+				Instagramフォローでラッピングオプション無料キャンペーン(～2025.03.20)も開催しております。
+			</dd>
+		</div>
+		<div class="event">
+			<dt class="event-date" data-date="2025-03-03">2025.03.03</dt>
+			<dd class="tooltip">後 <span class="countdown"></span> 日間残りです！！</dd>
+			<dd>リニューアルオープン記念ミニブーケプレゼント開催<br>
+				リニューアルオープンを記念して先着30名でご来店のお客様へミニブーケをプレゼントいたします。<br>
+				営業再開：2025年3月12日(水) 10：00～<br>
+				従業員一同、みなさまのご来店をお待ちしております。
+			</dd>
+		</div>
+		<div class="event">
+			<dt class="event-date" data-date="2025-02-02">2025.02.02</dt>
+			<dd class="tooltip">後 <span class="countdown"></span> 日間残りです！！</dd>
+			<dd>
+					明日(2/3)より、リニューアルに伴う店舗休業をさせていただきます。<br>
+					リニューアルオープン予定日：2025年3月12日(水)
+			</dd>
+		</div>
+	</dl>
+	<div id="popup" class="popup" style="display: none;">
+		<div class="popup-content">
+		  <img id="eventImage" src="" alt="Event Image">
+		  <h2 id="eventName"></h2>
+		  <p><strong>開催日:</strong> <span id="eventTime"></span></p>
+		  <p><strong>場所:</strong> <span id="eventLocation"></span></p>
+		  <p><strong>内容:</strong> <span id="eventDescription"></span></p>
+		</div>
+	  </div>
+	  
+	</main>
+	<footer>
+		<p>Copyright &copy; 2025 Petit fleurs All rights reserved.</p>
+	</footer>
+<!--wrapper 終了--></div>
+</body>
+</html>

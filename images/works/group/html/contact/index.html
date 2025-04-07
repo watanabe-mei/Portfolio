@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Petit fleurs">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACT::Petit fleurs</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/common_sp.css" media="screen and (max-width: 600px)">
+<link rel="stylesheet" href="../assets/css/contact.css">
+<link rel="stylesheet" href="../assets/css/contact_sp.css" media="screen and (max-width: 600px)">
+</head>
+<body id="contact">
+<div id="wrapper">
+	<header>
+		<div>
+			<p><a href="../index.html"><img src="../assets/images/home/logo.png" alt="ロゴ"></a></p>
+			<h1>ようこそ、<br>Petit Fleurs へ</h1>
+		</div>
+		<nav>
+			<input type="checkbox" id="menu">
+			<label for="menu"><img src="../assets/images/home/menuBtn.png" alt="MENU"></label>
+			<ul>
+				<li class="menu1"><a href="../index.html"><img src="../assets/images/home/nav/1.png" alt="HOME"></a></li>
+				<li class="menu2"><a href="../about/index.html"><img src="../assets/images/home/nav/2.png" alt="ABOUT"></a></li>
+				<li class="menu3"><a href="../gift/index.html"><img src="../assets/images/home/nav/3.png" alt="GIFT"></a></li>
+				<li class="menu4"><a href="../workshop/index.html"><img src="../assets/images/home/nav/4.png" alt="WORKSHOP"></a></li>
+				<li class="menu5"><a href="../gallery/index.html"><img src="../assets/images/home/nav/5.png" alt="GALLERY"></a></li>
+				<li class="menu6"><a href="../contact/index.html"><img src="../assets/images/home/nav/6.png" alt="CONTACT"></a></li>
+			</ul>
+		</nav>
+		<p class="messBtns zoom"><a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/home/ins/22.png" alt="instagram"></a></p>
+	</header>
+	<main>
+	<p><img src="../assets/images/contact/2.png" alt="トップ画像"></p>
+	<h2>CONTACT</h2>
+	<form action="thanks.html" method="post" id="form">
+		<dl>
+			<div class="odd">
+				<dt>お問い合わせの種別(必須)</dt>
+				<dd>
+					<select required>
+						<option value="" selected>選択してください</option> 
+						<option value="ワークショップのお申込み">ワークショップのお申込み</option>
+						<option value="商品について">商品について</option>
+						<option value="お届けについて">お届けについて</option>
+						<option value="サービス全般について">サービス全般について</option>
+						<option value="ご注文の変更・キャンセル・返品について">ご注文の変更・キャンセル・返品について</option>
+						<option value="ご注文商品の不良や仕様確認について">ご注文商品の不良や仕様確認について</option>
+						<option value="ラッピング・梱包について">ラッピング・梱包について</option>
+						<option value="領収書について">領収書について</option>
+						<option value="立て札・メッセージカードについて">立て札・メッセージカードについて</option>
+						<option value="胡蝶蘭・観葉植物・スタンド花の引き取りについて">胡蝶蘭・観葉植物・スタンド花の引き取りについて</option>
+						<option value="お花の定期便について">お花の定期便について</option>
+						<option value="ログイン・アカウント情報について">ログイン・アカウント情報について</option>
+						<option value="報告のご提案（法人様）">報告のご提案（法人様）</option>
+						<option value="取扱商品の新規のご提案（法人様）">取扱商品の新規のご提案（法人様）</option>
+						<option value="その他">その他</option>
+					</select>
+				</dd>
+			</div>
+			<div class="gap">
+				<dt>お名前(必須)</dt>
+				<dd><input type="text" name="sei" value="" placeholder="姓" required></dd>
+				<dd><input type="text" name="mei" value="" placeholder="名" required></dd>
+			</div>
+			<div class="odd">
+				<dt>メールアドレス(必須)</dt>
+				<dd><input type="email" name="email" value="" placeholder="" required></dd>
+			</div>
+			<div>
+				<dt>電話番号(任意)</dt>
+				<dd><input type="tel" name="tell" value="" pattern="[0-9]{10,11}" placeholder="例:0312345678 (ハイフン無し)"></dd>
+			</div>
+			<div class="odd">
+				<dt>注文コード(任意)</dt>
+				<dd><input type="text" name="oder" value="" pattern="^([a-zA-Z0-9]{6})$" placeholder="半角英数字6文字"></dd>
+			</div>
+			<div>
+				<dt>定期便契約コード(任意)</dt>
+				<dd><input type="text" name="oder1" value="" pattern="^[0-9A-Za-z]+$" placeholder="半角英数字"></dd>
+			</div>
+			<div class="odd">
+				<dt>定期便注文コード(任意)</dt>
+				<dd><input type="text" name="oder2" value="" pattern="^[0-9A-Za-z]+$" placeholder="半角英数字"></dd>
+			</div>
+			<div>
+				<dt>お問い合わせ内容(必須)</dt>
+				<dd><textarea cols="30" placeholder="" required></textarea></dd>
+			</div>
+		</dl>
+		<p><input type="reset" value="クリア">
+		<input type="submit" value="確認画面へ"></p>
+	</form>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2025 Petit fleurs All rights reserved.</p>
+		<p class="thanks_page"><a href="thanks.html" target="_blank"><img src="../assets/images/home/thanks.png" class="thanks" alt="thanks_page"></a></p>
+	</footer>
+<!--wrapper 終了--></div>
+</body>
+</html>

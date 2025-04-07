@@ -1,0 +1,481 @@
+/* ============ Phần chung: Áp dụng cho toàn bộ trang web ============ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 25px;
+  background: #e0e0e0;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  gap: 25px;
+}
+
+.neumorphism {
+  background: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+  padding: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+img {
+  max-width: 1000%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+h2,
+footer p {
+  text-align: center;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Thanh điều hướng và Footer --- */
+nav ul,
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+nav a,
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+nav a:hover,
+footer a:hover,
+nav a.active,
+footer a.active {
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  border-radius: 15px;
+}
+
+/* --- Các tiêu đề chung (cỡ chữ rem) --- */
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 3px solid #4a90e2;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.2rem;
+  border-left: 5px solid #4a90e2;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* --- Layout Grid --- */
+.grid {
+  display: grid;
+  gap: 15px;
+}
+.col-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.col-3 {
+  grid-template-columns: 1fr 2fr;
+}
+.col-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* --- Avatar --- */
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+/* --- Nút quay lên đầu trang --- */
+.top-btn {
+  border-radius: 50%;
+  position: fixed;
+  right: 10%;
+  bottom: 20px;
+}
+
+/* ======= BỐ CỤC group ======= */
+.group-header {
+  display: flex;
+  align-items: center; /* Căn giữa chữ và ảnh theo chiều dọc */
+  gap: 10px; /* Khoảng cách giữa chữ và ảnh */
+}
+
+.group-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.group-header img {
+  width: 40px; /* Hoặc 50% nếu bạn muốn theo phần trăm */
+  height: auto;
+}
+
+#tooltip {
+  position: absolute;
+  background: #98adfa;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+#tooltip .tooltip-arrow {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #98adfa;
+  box-shadow: 0 2px 5px rgba(146, 173, 238, 0.2);
+  content: "";
+}
+
+/* ======= BỐ CỤC GIỮA ẢNH VÀ THÔNG TIN ======= */
+#about .grid.col-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+#about .grid.col-3 > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+#about .grid.col-3 > div:first-child img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  height: auto;
+}
+#about .section-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+dd button {
+  margin-left: 20px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+dd button:hover {
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #9cc3e6, inset -5px -5px 10px #ffffff;
+}
+/* Căn giữa dl content */
+.contact-info {
+  width: 100%;
+}
+.contact-info dl {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-info dl {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact-info dl dt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* --- Kỹ năng --- */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+}
+.skill-item img {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 8px;
+}
+.skill-item p,
+.skill-item .stars {
+  margin: 5px 0;
+}
+.stars {
+  color: #f0ad4e;
+  font-size: 1.25rem;
+}
+
+/* ======================= HAMBURGER MENU - MẶC ĐỊNH ======================= */
+.hamburger-menu {
+  position: fixed;
+  top: 10px;
+  right: 10%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  border-radius: 50%;
+  z-index: 9999;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hamburger-menu:hover,
+.hamburger-menu.active {
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #9cc3e6, inset -5px -5px 10px #ffffff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: none;
+}
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: #e0e0e0;
+  box-shadow: -8px 0 16px #bebebe;
+  z-index: 1002;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: left 0.3s ease;
+}
+.mobile-sidebar.open {
+  left: 0;
+  width: 65% !important;
+}
+.mobile-sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+  text-align: center;
+}
+.mobile-sidebar a:hover,
+.mobile-sidebar a.active {
+  box-shadow: inset 5px 5px 10px #9cc3e6, inset -5px -5px 10px #ffffff;
+}
+#menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.hamburger-menu.active:hover {
+  box-shadow: inset 5px 5px 10px #ffaaaa, inset -5px -5px 10px #ffffff;
+}
+
+/* ======================= ENDING ======================= */
+/* Fix phần ending căn giữa hoàn hảo và cách ảnh 20px */
+.ending dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px; /* Tạo khoảng cách 20px giữa ảnh và chữ */
+}
+
+.ending dl dt,
+.ending dl dd {
+  margin: 0;
+  /* padding: 0; */
+}
+
+.ending img.avatar {
+  width: 20%; /* bạn có thể tùy chỉnh theo ý */
+  height: auto;
+  margin: 0 auto;
+}
+
+.portfolio-ending {
+  margin: 0 auto;
+  padding: 40px 25px;
+  font-size: 16px;
+  line-height: 1.8;
+  background: #fdfdfd;
+  border-radius: 20px;
+  box-shadow: inset 6px 6px 12px #cccccc, inset -6px -6px 12px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* ============ Phần Responsive (768px trở xuống) ============ */
+@media (max-width: 768px) {
+  /* Grid hiển thị 1 cột trên di động */
+  .col-2,
+  .col-3,
+  .col-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ẩn nav chính, hiển thị hamburger-menu */
+  nav {
+    display: none !important;
+  }
+
+  .container {
+    /* width: 95% !important; */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Áp dụng .neumorphism nhưng loại bỏ .hamburger-menu */
+  .neumorphism:not(.hamburger-menu) {
+    width: 95%;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Căn giữa phần Contact-info hoàn hảo */
+  .contact-info,
+  .contact-info dl,
+  .contact-info dt,
+  .contact-info dd {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* skill-item căn giữa tuyệt đối */
+  .skill-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Header responsive hoàn chỉnh, tránh hamburger-menu che */
+  header.neumorphism {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-top: 50px !important;
+    position: relative !important;
+  }
+
+  header.neumorphism h1 {
+    font-size: 1.2rem !important;
+    word-break: keep-all !important;
+    margin: 10px auto 0 auto !important;
+  }
+
+  header.neumorphism img.logo {
+    width: 60px !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Nút top-btn không bị bóp méo */
+  .top-btn {
+    width: 25px !important;
+    height: 25px !important;
+    padding: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .grid.col-3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #about .section-content {
+    width: 100%;
+  }
+  .contact-info dl {
+    align-items: center;
+  }
+  .section-img,
+  .section-content {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============ Phần Responsive (769px trở lên) ============ */
+@media (min-width: 769px) {
+  .hamburger-menu,
+  .mobile-sidebar,
+  .overlay {
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+}

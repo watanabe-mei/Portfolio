@@ -1,0 +1,149 @@
+/* WORKSセクション専用スタイル */
+.works-group-section {
+  background: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+  padding: 20px;
+}
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: flex-start;
+}
+.works-section-img img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.works-group-content h4,
+.works-personal-content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+.works-group-content h5,
+.works-personal-content h5 {
+  font-size: 16px;
+  color: #1f78d1;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.groupSummary {
+  padding-left: 20px;
+  margin: 0;
+}
+.groupSummary_list {
+  margin-bottom: 8px;
+  list-style-type: square;
+}
+.works-group-content p {
+  line-height: 1.6;
+}
+.works-group-wrapper {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: inset 4px 4px 8px #ccc, inset -4px -4px 8px #fff;
+}
+
+/* ✅ WORKS đảo ngược bố cục */
+.works-grid-reverse {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* ============================= */
+/* 🔸 PHẦN RIÊNG: 個人創作 */
+/* ============================= */
+
+.works-personal-section {
+  background: #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.works-personal-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.works-personal-grid.reverse {
+  flex-direction: row-reverse;
+}
+
+.works-personal-content,
+.works-personal-img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.works-personal-img img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.works-personal-wrapper {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: inset 4px 4px 8px #ccc, inset -4px -4px 8px #fff;
+}
+
+/* 作品のボタン */
+.imgBtn {
+  margin: 20px;
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 40px;
+  border: none;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.imgBtn:hover {
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #9cc3e6, inset -5px -5px 10px #ffffff;
+}
+
+/* ============================= */
+/* ✅ Responsive: mobile tablet  */
+/* ============================= */
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+  .works-section-img,
+  .works-group-wrapper {
+    padding: 10px;
+  }
+  .works-group-content h4 {
+    font-size: 18px;
+  }
+  .works-group-content h5 {
+    font-size: 15px;
+  }
+  /* Responsive cũng áp dụng tương tự */
+  .works-grid-reverse {
+    grid-template-columns: 1fr;
+  }
+  /* 個人 */
+  .works-personal-grid,
+  .works-personal-grid.reverse {
+    flex-direction: column;
+  }
+
+  .works-personal-img,
+  .works-personal-wrapper {
+    padding: 10px;
+  }
+}

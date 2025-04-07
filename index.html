@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="ポートフォリオ｜メイオウ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ポートフォリオ | メイオウ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/pop.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/works.css" />
+    <link rel="stylesheet" href="css/hobby.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header & Logo -->
+      <header
+        class="neumorphism"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <img src="images/logo.png" alt="Logo" class="neumorphism" />
+        <h1>ポートフォリオ｜メイオウ</h1>
+      </header>
+      <!-- NAV -->
+      <nav class="neumorphism">
+        <ul>
+          <li><a href="#about" class="active">自己紹介</a></li>
+          <li><a href="#skills">スキル</a></li>
+          <li><a href="#works">作品</a></li>
+          <li><a href="#hobby">興味</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nút hamburger -->
+      <div class="hamburger-menu neumorphism" onclick="toggleMenu()">
+        <span id="menu-icon">🍔</span>
+      </div>
+      <!-- Overlay -->
+      <div class="overlay" onclick="toggleMenu()"></div>
+      <!-- Sidebar menu -->
+      <div class="mobile-sidebar neumorphism">
+        <a href="#about" onclick="toggleMenu()">自己紹介</a>
+        <a href="#skills" onclick="toggleMenu()">スキル</a>
+        <a href="#works" onclick="toggleMenu()">作品</a>
+        <a href="#hobby" onclick="toggleMenu()">興味</a>
+        <a href="#contact" onclick="toggleMenu()">連絡先</a>
+      </div>
+
+      <!-- ABOUT ME -->
+      <section class="neumorphism" id="about">
+        <h2>自己紹介</h2>
+        <div class="neumorphism grid col-3">
+          <div class="neumorphism">
+            <img src="images/avatar/ava1.jpg" alt="Avatar" />
+          </div>
+          <div class="section-content">
+            <div class="contact-info">
+              <dl>
+                <div class="neumorphism grid col-3">
+                  <dt>名前</dt>
+                  <dd class="neumorphism">
+                    渡邉メイオウ <br />
+                    (HA THI HOAI THU)
+                  </dd>
+                </div>
+                <div class="neumorphism grid col-3">
+                  <dt>年齢</dt>
+                  <dd class="neumorphism">32歳</dd>
+                </div>
+                <div class="neumorphism grid col-3">
+                  <dt>学歴</dt>
+                  <dd class="neumorphism">
+                    東京商科·法科学院専門学校 国際経営学科
+                    国際経営ビジネスコース 卒業<br />
+                    <button id="eduDetailBtn">詳細</button>
+                  </dd>
+                </div>
+                <div class="neumorphism grid col-3">
+                  <dt>職歴</dt>
+                  <dd class="neumorphism">
+                    職業訓練 AI活用 &#10005; Webサイトクリエータ科 修了<br />
+                    <button id="workDetailBtn">詳細</button>
+                  </dd>
+                </div>
+                <div class="neumorphism grid col-3">
+                  <dt>自分の特徴</dt>
+                  <dd class="neumorphism">
+                    MICROSOFT OFFICE SPECIALIST EXCEL 合格 <br />
+                    日本語能力試験 N2 合格 <br />
+                    外国人就労適性試験 レベルA - 収得<br />
+                    <button id="licenseDetailBtn">詳細</button>
+                  </dd>
+                </div>
+                <div class="neumorphism grid col-3">
+                  <dt>希望職種</dt>
+                  <dd class="neumorphism">
+                    私は2025年1月からプログラミングの勉強を始めたフロントエンドWeb開発者志望の新人です。<br />
+                    実務経験はまだありませんが、この3ヶ月間、CSSやJavaScriptの効果を活かしたWebサイトのインターフェースを自分で作成し、ユーザーに印象的な体験を提供できるよう努力してきました。<br />
+                    <strong
+                      >知識は学べますが、継続力と情熱こそが成功の鍵だと信じています。</strong
+                    >プロの現場で学び、貢献する機会をいただければ幸いです。<br />
+                    <button id="jobDetailBtn">詳細</button>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal ẩn để hiển thị chi tiết học vấn (学歴) -->
+      <div class="modal" id="eduModal">
+        <div class="modal-content neumorphism">
+          <!-- Nút đóng modal -->
+          <span class="close" id="closeEduModal">&times;</span>
+          <h3>学歴の詳細</h3>
+          <!-- Bạn có thể tùy ý dùng table hoặc grid. Ở đây dùng grid cho gọn. -->
+          <div class="modal-grid">
+            <div class="modal-row">
+              <div class="modal-col">2008 - 09</div>
+              <div class="modal-col">XUAN DINH 高校</div>
+              <div class="modal-col">入学</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2011 - 06</div>
+              <div class="modal-col">XUAN DINH 高校</div>
+              <div class="modal-col">卒業</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2011 - 10</div>
+              <div class="modal-col">中央師範短期大学 教育学</div>
+              <div class="modal-col">入学</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2014 - 06</div>
+              <div class="modal-col">中央師範短期大学 教育学</div>
+              <div class="modal-col">卒業</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2015 - 10</div>
+              <div class="modal-col">東京国際大学付属日本語学科</div>
+              <div class="modal-col">入学</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2017 - 03</div>
+              <div class="modal-col">東京国際大学付属日本語学科</div>
+              <div class="modal-col">卒業</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2017 - 04</div>
+              <div class="modal-col">
+                東京商科·法科学院専門学校<br />
+                国際経営学科 国際経営ビジネスコース
+              </div>
+              <div class="modal-col">入学</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2019 - 03</div>
+              <div class="modal-col">
+                東京商科·法科学院専門学校<br />
+                国際経営学科 国際経営ビジネスコース
+              </div>
+              <div class="modal-col">卒業</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal ẩn để hiển thị chi tiết 職歴 -->
+      <div class="modal" id="workModal">
+        <div class="modal-content neumorphism">
+          <!-- Nút đóng modal -->
+          <span class="close" id="closeWorkModal">&times;</span>
+          <h3>職歴の詳細</h3>
+          <!-- Grid với layout 3 cột: Thời gian (Năm - Tháng) / Nội dung / Trạng thái -->
+          <div class="modal-grid">
+            <div class="modal-row">
+              <div class="modal-col">2019 - 04</div>
+              <div class="modal-col">株式会社 コロワイド</div>
+              <div class="modal-col">入社</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2024 - 01</div>
+              <div class="modal-col">株式会社 コロワイド</div>
+              <div class="modal-col">退社</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2023 - 03</div>
+              <div class="modal-col">
+                職業訓練 AI活用 X Webサイクリエーター科
+              </div>
+              <div class="modal-col">入学</div>
+            </div>
+            <div class="modal-row">
+              <div class="modal-col">2025 - 03</div>
+              <div class="modal-col">
+                職業訓練 AI活用 &#10005; Webサイクリエーター科
+              </div>
+              <div class="modal-col">修了</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup Modal cho 資格・免許 -->
+      <div class="modal" id="licenseModal">
+        <div class="modal-content neumorphism">
+          <!-- Nút đóng modal -->
+          <span class="close" id="closeLicenseModal">&times;</span>
+          <h3>資格・免許 の詳細</h3>
+          <!-- Grid layout: 3 cột (Năm, Tháng, Nội dung) -->
+          <div class="modal-grid">
+            <!-- Hàng 1 -->
+            <div class="modal-row">
+              <div class="modal-col">2017 - 07</div>
+              <div class="modal-col">Microsoft Office Specialist Excel</div>
+              <div class="modal-col">合格</div>
+            </div>
+            <!-- Hàng 2 -->
+            <div class="modal-row">
+              <div class="modal-col">2017 - 12</div>
+              <div class="modal-col">日本語能力試験 N2</div>
+              <div class="modal-col">合格</div>
+            </div>
+            <!-- Hàng 3 -->
+            <div class="modal-row">
+              <div class="modal-col">2018 - 8</div>
+              <div class="modal-col">外国人技能実習試験 レベルA</div>
+              <div class="modal-col">取得</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal hiển thị chi tiết 希望職種 -->
+      <div class="modal" id="jobModal">
+        <div class="modal-content neumorphism">
+          <!-- Nút đóng modal -->
+          <span class="close" id="closeJobModal">&times;</span>
+          <h3 class="animate-title">希望職種の詳細</h3>
+          <p class="animate-section fadeIn neumorphism">
+            私は、ウェブ開発の世界に魅了され、その可能性に大きな期待を抱いています。<br />
+            特に、自分が書いたコードが画面上で動き、デザインとして形になる瞬間に、言葉にできないほどのワクワク感を覚えます。<br />
+            この感動をもっと深く味わい、スキルを磨きながら成長したいと強く思っています。
+          </p>
+          <p
+            class="animate-section slideInRight neumorphism"
+            style="animation-delay: 0.3s"
+          >
+            現在、HTML・CSS・JavaScriptの基本を習得し、ウェブページの構築ができるようになりました。<br />
+            しかし、実務経験はまだ浅く、現場での開発フローや高度な実装技術を学ぶ必要があると実感しています。<br />
+            貴社での実務を通じて、フロントエンド開発のスキルを一層向上させ、ユーザーにとって快適なデザインと機能を提供できるエンジニアを目指したいと考えています。
+          </p>
+          <p
+            class="animate-section slideInLeft neumorphism"
+            style="animation-delay: 0.6s"
+          >
+            また、私の強みは、新しい知識を貪欲に吸収し、常に成長を追求する姿勢にあります。<br />
+            自分の可能性が広がっていくことに喜びを感じ、困難な課題にも積極的に挑戦する意欲があります。
+          </p>
+          <p
+            class="animate-section slideInRight neumorphism"
+            style="animation-delay: 0.9s"
+          >
+            未経験ではありますが、どんな小さなチャンスも逃さず、貴社の一員として全力で貢献する所存です。
+          </p>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <section class="neumorphism" id="skills">
+        <h2>スキル</h2>
+        <dl>
+          <dt><h3>Web 開発 - 利用可能言語</h3></dt>
+          <dd class="grid col-4">
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/web/8.png"
+                class="neumorphism"
+                alt="HTML Icon"
+              />
+              <p>
+                HTML <br />
+                文法を理解した上でマークアップすることが可能です。
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/web/9.png"
+                class="neumorphism"
+                alt="CSS Icon"
+              />
+              <p>
+                CSS <br />
+                HTMLを効果的に書くことが可能。<br />
+                基本的なタグは理解出来ます。
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/web/12.png"
+                class="neumorphism"
+                alt="JavaScript Icon"
+              />
+              <p>
+                JavaScript <br />
+                Webページによく使用するインタラクションを記述する事が可能です。
+              </p>
+              <div class="stars">★★☆☆☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/web/jquery.png"
+                class="neumorphism"
+                alt="jQuery Icon"
+              />
+              <p>
+                jQuery <br />
+                Webページによく使用するインタラクションを記述する事が可能です。
+              </p>
+              <div class="stars">★★☆☆☆</div>
+            </div>
+          </dd>
+
+          <dt><h3>Web 開発 - 利用可能ツール</h3></dt>
+          <dd class="grid col-4">
+            <div class="neumorphism skill-item">
+              <img src="images/icon/web/7.png" class="neumorphism" alt="Icon" />
+              <p>
+                Visuar Studio Code <br />
+                軽量で強力なコードエディタで、<br />多くのプログラミング言語をサポートし<br />拡張機能が豊富で、<br />Web開発に最適です。
+              </p>
+              <div class="stars">★★★☆☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img src="images/icon/web/4.png" class="neumorphism" alt="Icon" />
+              <p>
+                Figma <br />
+                リアルタイムでコラボできるクラウドベースのデザインツールです。
+              </p>
+              <div class="stars">★★☆☆☆☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img src="images/icon/web/5.png" class="neumorphism" alt="Icon" />
+              <p>
+                Canva <br />
+                簡単にデザインやプロトタイプを作成できるクラウドベースのツールです
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/web/11.png"
+                class="neumorphism"
+                alt="Icon"
+              />
+              <p>
+                GitHub <br />
+                コードのホスティングとバージョン管理を提供するプラットフォームで、開発者が共同でプロジェクトを管理しやすくします。
+              </p>
+              <div class="stars">★☆☆☆☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img src="images/icon/web/6.png" class="neumorphism" alt="Icon" />
+              <p>
+                Photoshop <br />
+                機能を使って、画像を加工することが可能です
+              </p>
+              <div class="stars">★☆☆☆☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/web/18.png"
+                class="neumorphism"
+                alt="Icon"
+              />
+              <p>
+                illastrator <br />
+                機能を使って、ロゴ、デザインカンプを作成する事が可能です。
+              </p>
+              <div class="stars">★☆☆☆☆</div>
+            </div>
+          </dd>
+
+          <dt><h3>オフィス</h3></dt>
+          <dd class="grid col-4">
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/office/1.png"
+                class="neumorphism"
+                alt="Icon"
+              />
+              <p>
+                Word <br />
+                文章、画像、表を使用しての文章作成が可能です。
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/office/2.png"
+                class="neumorphism"
+                alt="Icon"
+              />
+              <p>
+                Excel <br />
+                表の作成、基本的な関数の計算をする事が可能です。
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img
+                src="images/icon/office/3.png"
+                class="neumorphism"
+                alt="Icon"
+              />
+              <p>
+                PowerPoint <br />
+                プレゼンテーションの作成、機能を使用しての画像の簡易的な加工が可能です。
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+          </dd>
+
+          <dt><h3>AI関連</h3></dt>
+          <dd class="grid col-4">
+            <div class="neumorphism skill-item">
+              <img src="images/icon/ai/17.png" class="neumorphism" alt="Icon" />
+              <p>
+                ChatGPT <br />
+                AIを活用したチャットボットで、自然言語処理を通じてユーザーと対話し、Web開発においてインタラクティブな機能を提供します。
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img src="images/icon/ai/16.png" class="neumorphism" alt="Icon" />
+              <p>
+                Leonardo <br />
+                クラウドベースのデザインツールで、画像生成や3Dテクスチャ生成などの機能を提供し、クリエイティブな作業を効率化します
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img src="images/icon/ai/14.png" class="neumorphism" alt="Icon" />
+              <p>
+                Claude <br />
+                Web開発においてユーザー体験の向上やタスクの自動化を支援します
+              </p>
+              <div class="stars">★★★☆☆</div>
+            </div>
+            <div class="neumorphism skill-item">
+              <img src="images/icon/ai/15.png" class="neumorphism" alt="Icon" />
+              <p>
+                Invideo AI <br />
+                AIを活用したオンラインビデオ作成プラットフォームで、簡単にプロフェッショナルなビデオを作成できます
+              </p>
+              <div class="stars">★★★☆☆</div>
+            </div>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- WORKS -->
+      <section class="neumorphism works-group-section" id="works">
+        <h2>作品</h2>
+        <div class="neumorphism">
+          <div class="group-header">
+            <h3>
+              グループ創作
+              <a href="images/works/group/html/index.html" target="_blank">
+                <img
+                  src="images/works/group/html/assets/images/home/logo.png"
+                  alt="「Petit Fleurs」Webサイトへ"
+                  class="tooltip-img"
+                />
+              </a>
+            </h3>
+          </div>
+          <div class="neumorphism works-grid">
+            <div class="works-section-img neumorphism">
+              <img src="images/works/group/1.png" alt="Petit Fleurs Image" />
+            </div>
+            <div class="works-group-content works-group-wrapper">
+              <h4>「Petit Fleurs」Webサイト</h4>
+              <p>
+                職業訓練校にて、チームで制作した作品です。<br />
+                別グループが担当したクライアント役より「幅広い世代の女性に親しまれる、花と癒しをテーマにした架空のフラワーショップの店舗サイト」の依頼を受け、トップページコンタクトページのデザインと有難うページのデザイン・コーディングを担当しました。
+              </p>
+              <h5>プロジェクト概要</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  制作年：<strong>2025年</strong>
+                </li>
+                <li class="groupSummary_list">
+                  ページ数：<strong>6ページ</strong>
+                </li>
+                <li class="groupSummary_list">
+                  制作期間：<strong>約2週間（デザインフェーズ：約12日）</strong>
+                </li>
+                <li class="groupSummary_list">
+                  チーム人数：<strong>3名</strong>
+                </li>
+                <li class="groupSummary_list">
+                  使用ツール：<strong>Visual Studio Code、Canva</strong>
+                </li>
+              </ul>
+              <h5>ターゲット層</h5>
+              <p>
+                20代〜60代のご夫婦・カップル、また花やアロマ、癒しを好む女性層。<br />
+                幅広い年代に親しまれるよう、温かみのある写真を多く使用し、ビジュアルで魅せる構成に。
+              </p>
+              <h5>コーポレートカラー / デザイン方針</h5>
+              <p>
+                ブランドカラーはグリーンを基調に、全体的に淡いグラデーションでやさしさと安心感を演出。<br />
+                フォント・余白の使い方にも配慮し、ナチュラルで落ち着いた雰囲気を表現。
+              </p>
+              <h5>サイトの目的</h5>
+              <p>
+                問い合わせやワークショップ予約数の向上<br />
+                ユーザーのアクションを促すため、各所に「お問い合わせ」やSNSリンクを挿入し、動線を意識した設計に。
+              </p>
+              <h5>担当領域（私の役割）</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  トップページのHTML/CSSコーディング
+                </li>
+                <li class="groupSummary_list">
+                  レスポンシブ対応（スマホ/タブレット）
+                </li>
+                <li class="groupSummary_list">アニメーションの研究と実装</li>
+                <li class="groupSummary_list">
+                  チームメンバーとのコミュニケーション、進捗共有
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="neumorphism works-grid-reverse">
+            <div class="works-group-content works-group-wrapper">
+              <h4>スライドショーの工夫</h4>
+              <p>
+                目的は「誰でも見やすく、印象に残る、また来たくなる」為に、スライドショー機能を実装し、ヒーローイメージを作成しました。<br />
+                スライドショーは、ユーザーが画像をクリックすることで次の画像に切り替わるように設計されています。
+              </p>
+              <h5>特徴・工夫ポイント</h5>
+              <ul class="mySummary">
+                <li class="mySummary_list">
+                  スライドサイズ：画面幅いっぱいの大きな画像を表示 →
+                  一目で店の雰囲気や魅力が伝わる
+                </li>
+                <li class="mySummary_list">
+                  ナビゲーションボタン：初期状態は半透明に設定して「視線を邪魔しない」デザイン。<br />
+                  → ホバー時には緑に発光（hoverで目立つ） →
+                  次回訪問時も印象に残る
+                </li>
+                <li class="mySummary_list">
+                  スマホ対応：指でも簡単に操作できる配置とサイズ
+                </li>
+                <li class="mySummary_list">
+                  テキスト最小化：画像の世界観を邪魔せず、シンプルな構成
+                </li>
+              </ul>
+              <h5>このデザインが与える効果</h5>
+              <ul class="mySummary">
+                <li class="mySummary_list">サイト訪問者の第一印象がアップ</li>
+                <li class="mySummary_list">
+                  写真中心の構成で「記憶に残りやすい」
+                </li>
+                <li class="mySummary_list">
+                  高齢層にもわかりやすく、若者にも「映える」印象
+                </li>
+                <li class="mySummary_list">
+                  次のアクション（スクロールやボタン操作）を自然と誘導する
+                </li>
+              </ul>
+            </div>
+            <div class="works-section-img neumorphism">
+              <img src="images/works/group/2.png" />
+            </div>
+          </div>
+          <div class="neumorphism works-grid-reverse">
+            <div class="works-group-content works-group-wrapper">
+              <h4>イベント表示の工夫</h4>
+              <p>
+                イベント開催日をホバーすると、<br />
+                🕒「あと何日でイベントが始まるか」を表示するカウントダウンが出現します。
+              </p>
+              <h5>イベントの状況は色分けで直感的に把握できます：</h5>
+              <ul class="mySummary">
+                <li class="mySummary_list">
+                  🟢 準備中（開催まで10日以上）：落ち着いた印象
+                </li>
+                <li class="mySummary_list">
+                  🟡 もうすぐ開催（10日以内）：注意喚起として視認性UP
+                </li>
+                <li class="mySummary_list">🔴 開催中：緊急性・注目度を強調</li>
+                <li class="mySummary_list">⚪ 終了済み：柔らかく情報整理</li>
+              </ul>
+              <h5>このデザインが与える効果</h5>
+              <ul class="mySummary">
+                <li class="mySummary_list">
+                  ユーザーは「今どういう状態なのか」を一目で理解でき、
+                </li>
+                <li class="mySummary_list">
+                  ページを読む負担が軽減され、快適でスマートな体験が実現します。
+                </li>
+              </ul>
+            </div>
+            <div class="works-section-img neumorphism">
+              <img src="images/works/group/3.png" />
+            </div>
+          </div>
+          <div class="neumorphism works-grid-reverse">
+            <div class="works-group-content works-group-wrapper">
+              <h4>CONTACTページの工夫</h4>
+              <p>
+                お問い合わせ後のサンクス画面では、<br />
+                ✔️「丁寧で温かみのあるメッセージ」と<br />
+                ✔️「花のイメージ画像」が組み合わされ、<br />
+                信頼感・安心感を与える設計になっています。
+              </p>
+              <ul class="mySummary">
+                <li class="mySummary_list">
+                  メッセージカード風のデザインで、<br />
+                  実店舗の“人の温もり”を感じさせる工夫がされています。
+                </li>
+                <li class="mySummary_list">
+                  背景には実際の花の写真を使うことで、<br />
+                  ブランドイメージと統一感を保ちつつ、<br />
+                  視覚的な癒し効果を与えています。
+                </li>
+              </ul>
+              <h5>アニメーションの工夫</h5>
+              <ul class="mySummary">
+                <li class="mySummary_list">
+                  PC表示では、<br />
+                  カードがふわっと立体的に回転しながら表示される3Dアニメーションで、<br />
+                  高級感・印象的な演出を実現。
+                </li>
+                <li class="mySummary_list">
+                  スマホ表示では、<br />
+                  画面上からスッとスライドインする動きを取り入れ、<br />
+                  テンポよく軽やかなユーザー体験を提供。
+                </li>
+              </ul>
+              <h5>このデザインが与える効果</h5>
+              <ul class="mySummary">
+                <li class="mySummary_list">問い合わせ後の不安を和らげる効果</li>
+                <li class="mySummary_list">また利用したい」と感じる好印象</li>
+                をユーザーに与えることができると思って設定しました。
+              </ul>
+            </div>
+            <div class="works-section-img neumorphism">
+              <img src="images/works/group/4.png" />
+            </div>
+          </div>
+        </div>
+        <!-- 🔷 個人創作 (Personal Work) セクション MISENサンプル -->
+        <div class="works-personal-section">
+          <div class="group-header">
+            <h3>
+              個人創作
+              <a href="#" target="_blank">
+                <img
+                  src="images/works/my/logo.png"
+                  alt="「ベトナムの味仙へようこそ」Webサイト - 進行中"
+                  class="tooltip-img"
+                />
+              </a>
+            </h3>
+          </div>
+          <!-- 🟩 トップページ - 画像左 / 内容右 (Không dùng reverse) -->
+          <div class="neumorphism works-personal-grid">
+            <div class="works-personal-img neumorphism">
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="500px"
+                src="https://embed.figma.com/proto/rJBqYUh87eqPUxVDK8Acie/watanabe.mei?page-id=3312%3A2&node-id=3339-295&p=f&viewport=2189%2C1346%2C0.23&scaling=scale-down&content-scaling=fixed&embed-host=share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="works-personal-content works-personal-wrapper">
+              <h4>「ベトナムの味仙へようこそ&#10083;」Webサイト</h4>
+              <p>
+                台湾と日本の味を融合した60年以上の伝統を誇る「味仙」は、現在ホーチミン市で店舗を展開中。<br />
+                ベトナムのユーザーに向け、独自の辛さと旨みを伝えるためのブランドサイトを制作しました。
+              </p>
+              <h5>プロジェクト概要</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  制作年：<strong>2025年</strong>
+                </li>
+                <li class="groupSummary_list">
+                  ページ数：<strong>5ページ（現在一部制作中）</strong>
+                </li>
+                <li class="groupSummary_list">
+                  制作期間：<strong>約1週間</strong>
+                </li>
+                <li class="groupSummary_list">
+                  チーム人数：<strong>1名（個人制作）</strong>
+                </li>
+                <li class="groupSummary_list">
+                  使用ツール：<strong
+                    >Figma、Visual Studio Code、Canva, ChatGPT</strong
+                  >
+                </li>
+              </ul>
+              <h5>ターゲット層</h5>
+              <p>
+                幅広い年齢層を対象に、友人同士・家族・会社の飲み会など多様なニーズに対応（辛さが苦手な人もOK）。
+              </p>
+              <h5>サイトの目的</h5>
+              <p>
+                Misenの存在を広く知ってもらい、来店のの増加を目指すブランディング施策の一環として企画しました。
+              </p>
+              <h5>デザイン方針</h5>
+              <p>
+                鮮やかな赤と黄色を基調にし、食欲をそそる写真を効果的に配置。辛さと温かみの両方を感じられる配色とトーンで親しみやすさを演出しました。
+              </p>
+              <h5>担当領域（私の役割）</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">全体設計・情報構造の整理</li>
+                <li class="groupSummary_list">
+                  デザイン作成およびコーディング（HTML/CSS/JS/JQ）
+                </li>
+                <li class="groupSummary_list">レスポンシブ対応</li>
+                <li class="groupSummary_list">ブランドに合ったトーン設計</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 🟦 ページ1 - reverse layout (内容左 / 画像右) -->
+          <div class="neumorphism works-personal-grid reverse">
+            <div class="works-personal-img neumorphism">
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="500px"
+                src="https://embed.figma.com/proto/rJBqYUh87eqPUxVDK8Acie/watanabe.mei?page-id=3312%3A2&node-id=3339-295&p=f&viewport=2189%2C1346%2C0.23&scaling=scale-down&content-scaling=fixed&embed-host=share"
+                allowfullscreen
+              ></iframe>
+              <button class="imgBtn" data-src="images/works/my/1.png">
+                🏠 ホーム
+              </button>
+            </div>
+            <div class="works-personal-content works-personal-wrapper">
+              <h4>ホーム紹介ページ</h4>
+              <p>
+                当ホームページは、視覚的なインパクトとユーザビリティを重視したデザインアプローチにより、国内外の利用者が快適に閲覧・操作できるよう工夫されています。
+              </p>
+
+              <h5>楕円形スライドの採用理由</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  訪問者の第一印象を強く残す視覚効果を生む
+                </li>
+                <li class="groupSummary_list">
+                  料理を自然かつ魅力的に際立たせる
+                </li>
+                <li class="groupSummary_list">
+                  従来のレイアウトを脱し、他サイトと差別化
+                </li>
+              </ul>
+
+              <h5>多言語対応 & ユーザーフレンドリーな設計</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  ベトナム語、日本語、中国語、韓国語、英語に対応
+                </li>
+                <li class="groupSummary_list">
+                  ライト／ダークテーマの切り替えが可能
+                </li>
+                <li class="groupSummary_list">
+                  高齢者にも配慮したシンプルかつ見やすいレイアウト
+                </li>
+              </ul>
+
+              <h5>画像とインタラクションの工夫</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  画像は全て拡大可能でリアルな体験を提供
+                </li>
+                <li class="groupSummary_list">
+                  キャンペーン情報は実際の写真付きで信頼感を向上
+                </li>
+                <li class="groupSummary_list">
+                  新ページ遷移なしのポップアップ表示でスムーズな閲覧体験
+                </li>
+              </ul>
+
+              <h5>スマート機能の搭載</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  イベントまでの残り日数を表示するカウントダウン
+                </li>
+                <li class="groupSummary_list">
+                  イベント状態を色別（🟢準備中、🟡間近、🔴開催中、⚪終了）で表示
+                </li>
+                <li class="groupSummary_list">
+                  感情に訴えかける設計でUXを向上
+                </li>
+              </ul>
+
+              <h5>まとめ</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  洗練された演出と効果的な情報配置
+                </li>
+                <li class="groupSummary_list">
+                  ユーザー体験を第一に考えた設計思想
+                </li>
+                <li class="groupSummary_list">
+                  エンゲージメントとリピーター獲得を強化
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 🟨 ページ2 -->
+          <div class="neumorphism works-personal-grid reverse">
+            <div class="works-personal-img neumorphism">
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="500px"
+                src="https://embed.figma.com/proto/rJBqYUh87eqPUxVDK8Acie/watanabe.mei?page-id=3312%3A2&node-id=3339-295&p=f&viewport=2189%2C1346%2C0.23&scaling=scale-down&content-scaling=fixed&embed-host=share"
+                allowfullscreen
+              ></iframe>
+              <button class="imgBtn" data-src="images/works/my/2.png">
+                🏢 会社概要
+              </button>
+            </div>
+            <div class="works-personal-content works-personal-wrapper">
+              <h4>会社概要 – 企業紹介ページ</h4>
+              <p>
+                この「会社概要」ページは、MISENがベトナムに初進出するにあたり、信頼構築を重視し、情報を分かりやすく丁寧にまとめた構成となっています。
+              </p>
+
+              <h5>創業者からのご挨拶</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  創業者の顔写真と短いメッセージを掲載
+                </li>
+                <li class="groupSummary_list">
+                  画像拡大演出で、感情に訴えるデザイン
+                </li>
+                <li class="groupSummary_list">
+                  ストーリーとビジョンで顧客との信頼関係を構築
+                </li>
+              </ul>
+
+              <h5>日本国内の店舗紹介</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  名古屋・東京の実店舗写真を使用
+                </li>
+                <li class="groupSummary_list">
+                  所在地・評価・1日平均来店者数を明記
+                </li>
+                <li class="groupSummary_list">
+                  左右対称の2画像レイアウトで視認性・直感性を確保
+                </li>
+              </ul>
+
+              <h5>会社情報</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  会社名・設立年・本社住所・事業内容を表形式で掲載
+                </li>
+                <li class="groupSummary_list">
+                  日本企業らしい整理されたビジネスレイアウト
+                </li>
+                <li class="groupSummary_list">
+                  親会社の公式サイトへのリンク埋め込みにも対応
+                </li>
+              </ul>
+
+              <h5>この構成を選んだ理由</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  第一印象から信頼感を高めるため
+                </li>
+                <li class="groupSummary_list">
+                  日本にしっかりとしたビジネス基盤があることを示すため
+                </li>
+                <li class="groupSummary_list">
+                  ベトナムのお客様に安心してご利用いただくため
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 🟥 ページ3 -->
+          <div class="neumorphism works-personal-grid reverse">
+            <div class="works-personal-img neumorphism">
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="500px"
+                src="https://embed.figma.com/proto/rJBqYUh87eqPUxVDK8Acie/watanabe.mei?page-id=3312%3A2&node-id=3339-295&p=f&viewport=2189%2C1346%2C0.23&scaling=scale-down&content-scaling=fixed&embed-host=share"
+                allowfullscreen
+              ></iframe>
+              <button class="imgBtn" data-src="images/works/my/3.png">
+                🍜 メニュー
+              </button>
+            </div>
+            <div class="works-personal-content works-personal-wrapper">
+              <h4>メニューページ紹介</h4>
+              <p>
+                この「メニュー」ページは、ベトナム人から海外のお客様まで誰でもスムーズ・簡単・直感的に注文できるように設計されています。
+              </p>
+
+              <h5>料理カテゴリの明確な分類</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  ジャンル
+                  "中華料理"「台湾料理」メイン料理：麵類ビリカラ料理、ニンニク料理＆ご飯物
+                </li>
+                <li class="groupSummary_list">
+                  サイドメニュー／おつまみ：追加の小皿料理
+                </li>
+                <li class="groupSummary_list">
+                  トッピング：お好みで追加できるオプション
+                </li>
+                <li class="groupSummary_list">
+                  ランチセット：オフィスワーカー向けセット
+                </li>
+                <li class="groupSummary_list">
+                  ドリンク類：🍺ビール、🍶日本酒、🧃ソフトドリンクをフィルターで選択可能
+                </li>
+                <li class="groupSummary_list">
+                  デザート：食後の甘い締めに最適
+                </li>
+              </ul>
+
+              <h5>スマートカート機能</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  カートではVND・JPY・TWD・USDで自動的に価格を表示
+                </li>
+                <li class="groupSummary_list">
+                  外国人ユーザーも計算不要で価格をすぐに把握可能
+                </li>
+                <li class="groupSummary_list">
+                  注文時には「チーン♪」＋ポップアップで追加完了を通知
+                </li>
+              </ul>
+
+              <h5>料理画像の視覚最適化</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  全ての料理画像が全画面で拡大可能
+                </li>
+                <li class="groupSummary_list">
+                  高齢者にも優しい、見やすく使いやすい設計
+                </li>
+                <li class="groupSummary_list">
+                  高解像度・暖色トーンの画像で食欲を刺激
+                </li>
+              </ul>
+
+              <h5>このデザインの目的</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  注文時間を短縮し、迷わず選べるように
+                </li>
+                <li class="groupSummary_list">
+                  視覚的魅力で料理の魅力を最大化
+                </li>
+                <li class="groupSummary_list">
+                  言語・通貨の壁を取り除き、誰にでも快適な体験を提供
+                </li>
+                <li class="groupSummary_list">
+                  細部までこだわった丁寧でプロフェッショナルな印象を与える
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 🟪 ページ4 -->
+          <div class="neumorphism works-personal-grid reverse">
+            <div class="works-personal-img neumorphism">
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="100%"
+                height="500px"
+                src="https://embed.figma.com/proto/rJBqYUh87eqPUxVDK8Acie/watanabe.mei?page-id=3312%3A2&node-id=3339-295&p=f&viewport=2189%2C1346%2C0.23&scaling=scale-down&content-scaling=fixed&embed-host=share"
+                allowfullscreen
+              ></iframe>
+              <button class="imgBtn" data-src="images/works/my/4.png">
+                📞 お問い合わせ
+              </button>
+            </div>
+            <div class="works-personal-content works-personal-wrapper">
+              <h4>お問い合わせページ紹介</h4>
+              <p>
+                このページは、お客様が簡単に問い合わせや予約、フィードバックを行えるよう、シンプルかつ視覚的に分かりやすく設計されています。
+              </p>
+              <h5>お客様の声（レビュー・スライダー）</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  顔写真と短いコメントを横スクロール型スライダーで表示
+                </li>
+                <li class="groupSummary_list">
+                  限られたスペースでも視覚的に目立つ構成
+                </li>
+                <li class="groupSummary_list">
+                  新規来訪者に信頼感と好印象を与える
+                </li>
+              </ul>
+              <h5>よくある質問（FAQアコーディオン）</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">🏠 レストランについて</li>
+                <li class="groupSummary_list">🍜 料理について</li>
+                <li class="groupSummary_list">📅 予約・パーティーについて</li>
+                <li class="groupSummary_list">💼 採用について</li>
+                <li class="groupSummary_list">
+                  アコーディオン形式でスマホでも操作しやすく、省スペースで効率的
+                </li>
+              </ul>
+              <h5>予約フォーム・応募フォーム</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  【予約フォーム】氏名、日時、人数、特別な要望／ボタン：「今すぐ予約」
+                </li>
+                <li class="groupSummary_list">
+                  【応募フォーム】氏名、希望職種、連絡先、履歴書添付／ボタン：「応募する」
+                </li>
+                <li class="groupSummary_list">
+                  ブランドカラー＆角丸デザインで統一感を演出
+                </li>
+                <li class="groupSummary_list">入力しやすく、送信もスムーズ</li>
+                <li class="groupSummary_list">
+                  送信後は「完了ポップアップ」で即時フィードバック
+                </li>
+              </ul>
+              <h5>このデザインの目的</h5>
+              <ul class="groupSummary">
+                <li class="groupSummary_list">
+                  誰でも簡単に問い合わせ・予約・意見を送信できる
+                </li>
+                <li class="groupSummary_list">
+                  レストラン側が迅速・的確に情報を取得できる
+                </li>
+                <li class="groupSummary_list">
+                  透明性・信頼性・開かれた雰囲気を全体で表現
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal imageModal -->
+      <div class="modal" id="imageModal">
+        <div class="modal-content neumorphism">
+          <span class="close" id="closeImageModal">&times;</span>
+          <h3 class="animate-title">画像の詳細</h3>
+          <p class="animate-section fadeIn neumorphism">
+            こちらは作品のレイアウトデザインです。
+          </p>
+          <div class="image-container">
+            <img src="" alt="確認画像" id="modalImage" class="responsive-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- =================== HOBBY SECTION =================== -->
+      <section class="neumorphism" id="hobby">
+        <h2 style="text-align: center; padding-top: 1rem">
+          興味（エフェクト一覧）
+        </h2>
+        <div class="effect-grid" id="effectGrid"></div>
+
+        <div
+          id="hobbyModal"
+          class="modal"
+          onclick="if(event.target === this) closeHobbyModal()"
+        >
+          <div class="modal-content">
+            <button class="close-btn" onclick="closeHobbyModal()">
+              &times;
+            </button>
+            <h3 id="hobbyModalTitle"></h3>
+            <p id="hobbyModalContent"></p>
+            <div id="demoElement">Demo Element</div>
+            <button onclick="runEffect()">エフェクト実行</button>
+            <pre id="effectCodeBlock"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="neumorphism" id="contact">
+        <h2>連絡先</h2>
+        <div class="contact-info">
+          <dl>
+            <div class="neumorphism grid col-3">
+              <dt>名前</dt>
+              <dd class="neumorphism">
+                渡邉メイオウ <br />
+                (HA THI HOAI THU)
+              </dd>
+            </div>
+            <div class="neumorphism grid col-3">
+              <dt>メールアドレス</dt>
+              <dd class="neumorphism">watanabe.mei2k@gmail.com</dd>
+            </div>
+            <div class="neumorphism grid col-3">
+              <dt>電話</dt>
+              <dd class="neumorphism">070 1359 5524</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ENDING -->
+      <section class="neumorphism ending">
+        <dl>
+          <dt>
+            <img
+              src="images/avatar/ava2.png"
+              alt="自分の写真"
+              class="avatar neumorphism"
+            />
+          </dt>
+          <dd class="portfolio-ending">
+            <p>
+              最後までポートフォリオをご覧いただき、誠にありがとうございました。<br />
+              少しでも
+              <strong>渡邉メイオウ</strong>
+              という人物にご興味をお持ちいただけましたら幸いです。
+            </p>
+            <p>
+              日本での生活を通じて、私は「伝えることの大切さ」と「創意工夫する力」の重要性を実感してきました。<br />
+              日本語教師としての経験と、AIやWeb制作に対する情熱を掛け合わせ、<br />
+              <strong>人の心を動かすデザイン</strong
+              >や、<strong>価値あるWebコンテンツの創出</strong>を目指しています。
+            </p>
+            <p>
+              今後はWeb業界の一員として、スキルを磨き続け、<br />
+              ただ就職するだけでなく「選ばれる存在」「信頼されるパートナー」となれるよう、日々努力を重ねて参ります。
+            </p>
+            <p>
+              未熟な点もあるかと思いますが、誠心誠意取り組み、<br />
+              御社のチームに貢献できるよう全力を尽くします。
+            </p>
+            <p><strong>どうぞ、よろしくお願い申し上げます。</strong></p>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- <button class="neumorphism top-btn" onclick="window.scrollTo(0,0)">
+        <i
+          class="fa-solid fa-jet-fighter-up fa-bounce"
+          style="color: #74c0fc"
+        ></i>
+      </button> -->
+      <button id="scrollTopBtn" class="neumorphism top-btn">
+        <i
+          class="fa-solid fa-jet-fighter-up fa-bounce"
+          style="color: #74c0fc"
+        ></i>
+      </button>
+
+      <footer class="neumorphism">
+        <ul class="neumorphism">
+          <li><a href="#about" class="active">自己紹介</a></li>
+          <li><a href="#skills">スキル</a></li>
+          <li><a href="#works">作品</a></li>
+          <li><a href="#hobby">興味</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+        <p>Copyring &copy; メイオウ Portfolio 2025.3</p>
+      </footer>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
